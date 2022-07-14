@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: webrpc
+    name: webrpcms
 
 eureka:
   client:

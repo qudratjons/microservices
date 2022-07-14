@@ -4,11 +4,14 @@ server:
 
 spring:
   application:
-    name: product
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/product-service
-
+    name: productms
+  datasource:
+    url: jdbc:postgresql://localhost:5432/product
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
 eureka:
   client:
     service-url:
