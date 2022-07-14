@@ -1,14 +1,18 @@
 package com.jonson.productservice.utils;
 
-import org.springframework.beans.BeanUtils;
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ConvertUtils {
 
-    private ConvertUtils() {
+    private final ModelMapper modelMapper;
+
+    public ConvertUtils() {
+        this.modelMapper = new ModelMapper();
     }
 
-    public static <T> T convert(Object source, T target) {
-        BeanUtils.copyProperties(source, target);
-        return target;
+    public <T> T convert(Object source, Class<T> type) {
+        return modelMapper.map(source, type);
     }
 }
