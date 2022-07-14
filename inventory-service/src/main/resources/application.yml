@@ -3,7 +3,7 @@ server:
   shutdown: graceful
 spring:
   application:
-    name: inventoryms
+    name: inventory
   datasource:
     url: jdbc:postgresql://localhost:5432/inventory
     username: postgres

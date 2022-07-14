@@ -3,7 +3,7 @@ server:
   shutdown: graceful
 spring:
   application:
-    name: orderms
+    name: order
   datasource:
     url: jdbc:postgresql://localhost:5432/order
     username: postgres

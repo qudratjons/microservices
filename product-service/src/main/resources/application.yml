@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: productms
+    name: product
   datasource:
     url: jdbc:postgresql://localhost:5432/product
     username: postgres

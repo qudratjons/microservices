@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: gatewayms
+    name: gateway
   cloud:
     gateway:
       discovery:

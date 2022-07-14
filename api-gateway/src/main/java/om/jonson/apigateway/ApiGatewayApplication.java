@@ -13,13 +13,4 @@ public class ApiGatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(ApiGatewayApplication.class, args);
     }
-
-    @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-        return builder.routes()
-                .route("product", r -> r.path("/services/product/**")
-                        .uri("lb://product"))
-                .build();
-    }
-
 }
